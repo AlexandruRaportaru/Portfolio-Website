@@ -1,0 +1,283 @@
+body {
+    background: #0a192f !important;
+}
+/* NAVBAR START */
+.navbar {
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    background-color: transparent;
+}
+
+.navbar-list {
+    margin-top: auto !important;
+    margin-left: auto;
+    display: flex;
+    list-style: none;
+}
+
+#logo {
+    font-family: 'Finger Paint', cursive;
+    font-size: 35px;
+    color: #64ffda;
+    margin: 0px;
+    padding: 0px;
+}
+  
+a {
+    text-decoration: none !important;
+    color: #64ffda !important;
+    padding: 0px 15px;
+    font-family: Consolas;
+}
+
+.menu {
+    border: none;
+    color:#8892b0;
+    opacity: 0.6;
+    transition: 0.3s;
+}
+.menu:hover {
+    opacity: 1;
+    color: #64ffda;
+}
+.btn-resume {
+    background-color: #0a192f !important;
+    border: none;
+    opacity: 0.7;
+    color: #64ffda !important;
+    margin-bottom: 7.5px;
+    margin-top: 7.5px;
+    margin-left: 15px;
+
+}
+.btn-resume:hover {
+    opacity: 1;
+    color: #8892b0 !important;
+}
+
+/* SOCIAL ICONS */
+
+
+.socialIcons {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    padding-left: 40px;
+    list-style: none;
+    position: fixed;
+    height: 87%;
+    justify-content: end;
+}
+
+.socialIcons li {
+    padding: 5px 0px;
+}
+
+.socialIcons::after {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 150px;
+    margin: 10px auto;
+    background-color: #64ffda;
+}
+
+/* INTRO START */
+
+.intro {
+    padding-left: 150px;
+    margin-left: 110px;
+    display: grid;
+    height: 600px;
+}
+
+.introText {
+    margin-top: 30px;
+    display: block;
+}
+
+.firstIntroText {
+    color: #64ffda;
+    font-size: 20px;
+    font-family: Consolas;
+    padding: 5px 0px;
+    display: inline-block;
+}
+
+.intro h1 {
+    font-size: 60px;
+    color: white;
+    padding: 5px 0px;
+}
+
+.secondIntroText {
+    color: #8892b0;
+    font-size: 40px;
+    padding: 5px 0px;
+    display: inline-block;
+}
+
+#container {
+    color:#8892b0;
+    font-size:30px;
+    bottom:45%;
+    display:flex;
+    padding: 5px 0px;
+}
+  
+#flip {
+    height:50px;
+    overflow:hidden;
+    font-family: Consolas;
+    padding-top: 3px;
+}
+  
+#flip > div > div {
+    color:#64ffda;
+    height:45px;
+    margin-bottom:45px;
+    display:inline-block;
+}
+  
+#flip div:first-child {
+    animation: show 10s linear infinite;
+}
+  
+#flip div div {
+    margin-left: 10px;
+    font-weight: bold; 
+}
+  
+@keyframes show {
+    0% {margin-top:-540px;}
+    5% {margin-top:-450px;}
+    16.66% {margin-top:-450px;}
+    21.66% {margin-top:-360px;}
+    33.33% {margin-top:-360px;}
+    38.33% {margin-top:-270px;}
+    50% {margin-top:-270px;}
+    55% {margin-top:-180px;}
+    66.66% {margin-top:-180px;}
+    71% {margin-top:-90px;}
+    83.33% {margin-top:-90px;}
+    88.33% {margin-top:0px;}
+    99.99% {margin-top:0px;}
+    100% {margin-top:-540px;}
+}
+
+.imageIntro {
+    position: absolute;
+    right: 0;
+    top: 275px;
+    padding-right: 50px;
+}
+
+
+/* ABOUT ME START */
+
+.about{
+    padding: 100px 150px;
+    margin: 0px 160px;
+    display: flex;
+}
+.aboutSection {
+    display: block;
+    padding-bottom: 40px;
+}
+.aboutNumber {
+    color: #64ffda;
+    font-family: Consolas;
+    font-size: 25px;
+    padding-bottom: 40px;
+    display: inline-block;
+}
+
+.aboutTitle {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.aboutNumber::after {
+    content: "";
+    display: inline-block;
+    position: relative;
+    top: -5px;
+    width: 220px;
+    height: 1px;
+    margin-left: 20px;
+    background-color: #80ffe5;
+}
+
+.aboutText {
+    color: #8892b0;
+    font-size: 18px;
+    display: inline-block;
+    width: 525px;
+}
+
+#aboutPhoto {
+    border-radius: 2%;
+}
+
+.aboutImage {
+    padding-top: 90px;
+}
+
+/* Skills Section */
+
+
+.skillsHeading {
+    display: block;
+    padding-top: 100px;
+}
+.skillsNumber {
+    color: #64ffda;
+    font-family: Consolas;
+    font-size: 25px;
+    padding-bottom: 40px;
+}
+
+.skillsTitle {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.skillsNumber::after {
+    content: "";
+    display: inline-block;
+    position: relative;
+    top: -5px;
+    width: 220px;
+    height: 1px;
+    margin-left: 20px;
+    background-color: #80ffe5;
+}
+
+.skillsText {
+    color: #8892b0;
+    font-size: 18px;
+    display: inline;
+    width: 525px;
+}
+
+.containerIcons {
+    text-align: center;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/* SHARED */
+
+.btn:focus {
+    box-shadow: none !important;
+}

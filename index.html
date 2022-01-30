@@ -6,8 +6,105 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Porfolio-website</title>
   <link rel="stylesheet" href="main.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Finger+Paint&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!--Navbar Section-->
+  <nav class="navbar navbar-light">
+    <div class="container-fluid">
+      <span class="navbar-brand mb-0 h1" id="logo">&lt;AR/&gt;</span>
+      <ul class="navbar-list">
+        <li><a href="#home">01.<span class="menu"> Home</span></a></li>
+        <li><a href="#about">02.<span class="menu"> About</span></a></li>
+        <li><a href="#skills">03.<span class="menu"> Skills</span></a></li>
+        <li><a href="#work">04.<span class="menu"> Work</span></a></li>
+        <li><a href="#contact">05.<span class="menu"> Contact</span></a></li>
+      </ul>
+      <a href="images\CV_RaportaruA..pdf" class="btn btn-outline-info btn-resume"><span>Resume</span></a>
+    </div>
+  </nav>
 
+  <!--SocialIcons Section-->
+  <div class="social">
+    <ul class="socialIcons">
+      <li><a href="https://github.com/AlexandruRaportaru" class="btn"><img src="images\github.png" width="24" height="24"></a></li>
+      <li><a href="https://www.linkedin.com/in/alexandru-raportaru-830970148/" class="btn"><img src="images\linkedin.png" width="24" height="24"></a></li>
+      <li><a href="https://www.instagram.com/alexandruraportaru_/" class="btn"><img src="images\instagram.png" width="24" height="24"></a></li>
+    </ul>
+  </div>
+
+  <!--Intro Section-->
+  <div class="intro">
+    <div class="introText">
+      <h6 class="firstIntroText">Hi, my name is 
+        <h1>
+          Alexandru Raportaru.
+        </h1>
+      </h6>
+      <h3 class="secondIntroText">I'm a Junior Front-End Developer</h3>
+      <div id="container">
+        and sometimes a  
+        <div id="flip">
+          <div><div>world traveller. </div></div>
+          <div><div>coffee lover. </div></div>
+          <div><div>mountain hiker. </div></div>
+          <div><div>morning person. </div></div>
+          <div><div>cat lover. </div></div>
+          <div><div>gamer. </div></div>
+        </div>
+      </div>
+    </div>
+    <div class="imageIntro">
+      <img class="photoIntro" src="images\d.png">
+    </div>
+  </div>
+
+  <!--About Section-->
+  <div class="about">
+    <div class="aboutSection">
+      <h2 class="aboutNumber">01. <span class="aboutTitle">Me, Myself and I</span></h2>
+      <p class="aboutText">
+        Hello! My name is Alex and I'm a curiosity-driven Junior Front-End Developer 
+        who enjoy creating thing that live on the internet. I'm passionate about bringing 
+        both the technical and visual aspects of digital products to life.
+        <br><br>
+        My interest in web development started back in 2021 when I was a Store Manager in 
+        a Tennis Shop and decided that it's about time to change my career. Since I didn't had 
+        any background in informatics, I took a Web Developer Course for begginers 
+        because I had to become familiar with the programming languages. At the end of the 
+        year I decided to take a JavaScript Course as well, because I was curious to learn more about it.
+        <br><br>
+        I'm a fast learner, constantly trying to improve my technical abilities while providing 
+        good and clean code at the same time. I'm happiest when I'm creating, learning,  
+        exploring and thinking about how to make things better.
+      </p>
+    </div>
+    <div class="aboutImage">
+      <img src="images\img.jpg" alt="photo" width="302" height="259" id="aboutPhoto">
+    </div>
+  </div>
+  <!--Skills Section-->
+  <div class="skills">
+    <div class="skillsHeading">
+      <h2 class="skillsNumber">02. <span class="skillsTitle">Skills and Tools</span></h2>
+      <p class="skillsText">
+        When I took the Web Developer course, I created a website from scratch using the basics of HTML, 
+        CSS, Bootstrap, PHP, jQuery & Wordpress.
+        <br><br>
+        On the other hand, when I finished the JavaScript Course, I was aware of DOM Manipulation, work 
+        with real API's, asyncronyous logic, destructuring, etc.
+      </p>
+    </div>
+    <div class="containerIcons"> 
+      <div class="box-icon">
+        <i class="devicon devicon-html5-plain" aria-hidden="true"></i>
+        <p>HTML5</p>
+      </div>
+    </div>
+  </div>               
 </body>
 </html>
