@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap");
+
 body {
     background: #1d1d1d !important;
 }
@@ -10,6 +12,8 @@ body {
     width: 100%;
     z-index: 10;
     background-color: #1d1d1d;
+    transition: top 0.3s;
+    display: block !important;
 }
 
 .navbar-list {
@@ -60,21 +64,59 @@ a {
 }
 
 .social-icons li {
-    padding: 5px 0px;
+    padding: 7px 0px;
 }
 
 .social-icons::after {
     content: "";
     display: block;
     width: 2px;
-    height: 250px;
+    height: 150px;
     margin: 10px auto;
     background-color: #64ffda;
 }
+  
+.social-icons li a {
+    position: relative; 
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 32px;
+    background: #1d1d1d;
+    border-radius: 50%;
+    border: 2px solid #64ffda;
+    transition: .3s;
+}
+  
+.social-icons li a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #64ffda;
+    transition: .3s;
+    transform: scale(.9);
+    z-index: -1;
+}
+  
+.social-icons li a:hover::before {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #64ffda;
+}
+  
+.social-icons li a:hover {
+    color: #64ffda;
+    box-shadow: 0 0 5px #64ffda;
+    text-shadow: 0 0 5px #64ffda;
+}
 
 .social-icons li:hover {
-    transform: scale(1.5);
-    transition-duration: 1s;
+    transform: scale(1.2);
+    transition: 0.3s;
 }
 
 /* INTRO SECTION */
@@ -216,12 +258,64 @@ a {
     width: 525px;
 }
 
-#about-photo {
-    border-radius: 2%;
+.about-image {
+    padding-top: 92px;
 }
 
-.about-image {
-    padding-top: 90px;
+.wrapper {
+    box-shadow: 10px 10px 30px -15px #64ffda;
+    transition: 0.3s;
+    display: block;
+    position: relative;
+    width: 100%;
+    border-radius: 2%;
+    background-color: #64ffda;
+}
+
+.wrapper img {
+    mix-blend-mode: multiply;
+    filter: grayscale(100%) contrast(1);
+    border-radius: 2%;
+    position: relative;
+}
+
+.wrapper::before {
+    top: 0px;
+    left: 0px;
+    mix-blend-mode: screen;
+    background-color: #1d1d1d;
+}
+
+.wrapper::after {
+    z-index: -1;
+    border: 2px solid #64ffda;
+    top: 20px;
+    left: 20px;
+}
+
+.wrapper::before , .wrapper::after {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 2%;
+    transition: 0.3s;
+}
+
+.wrapper:hover {
+    box-shadow: none;
+}
+
+.wrapper img:hover {
+    mix-blend-mode: normal;
+    filter: none;
+}
+
+.wrapper:hover::after {
+    border: 2px solid #64ffda;
+    top: 0px;
+    left: 0px;
 }
 
 /* SKILLS SECTION */
@@ -445,6 +539,7 @@ textarea {
     border-radius: 0 !important;
     box-shadow: none !important;
     height: 150px !important;
+    color: #8d8d8d !important;
 }
 
 /* NEON BUTTONS */
@@ -460,7 +555,7 @@ textarea {
 .neon:hover {
     color: #64ffda !important;
     box-shadow: 0 0 2.5px #64ffda, 0 0 10px #64ffda, 0 0 20px #64ffda;
-    transition: 0.3s;
+    transition: 0.3s !important;
     font-weight: bold !important;
     border: 2px solid #64ffda;
 }

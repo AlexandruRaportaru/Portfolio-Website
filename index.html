@@ -16,7 +16,7 @@
 </head>
 <body>
   <!--NAVBAR SECTION-->
-  <nav class="navbar navbar-light">
+  <nav class="navbar navbar-light" id="navbar">
     <div class="container-fluid">
       <span class="navbar-brand mb-0 h1" id="logo">&lt;AR/&gt;</span>
       <ul class="navbar-list">
@@ -32,9 +32,21 @@
   <!--SOCIAL ICONS SECTION-->
   <div class="social">
     <ul class="social-icons">
-      <li><a href="https://github.com/AlexandruRaportaru" class="btn"><img src="images\github.png" width="24" height="24"></a></li>
-      <li><a href="https://www.linkedin.com/in/alexandru-raportaru-830970148/" class="btn"><img src="images\linkedin.png" width="24" height="24"></a></li>
-      <li><a href="https://www.instagram.com/alexandruraportaru_/" class="btn"><img src="images\instagram.png" width="24" height="24"></a></li>
+      <li>
+        <a href="https://github.com/AlexandruRaportaru" class="btn">
+          </i><img src="images\github.png" width="24" height="24">
+        </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/alexandru-raportaru-830970148/" class="btn">
+          <img src="images\linkedin.png" width="24" height="24">
+        </a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/alexandruraportaru_/" class="btn">
+          <img src="images\instagram.png" width="24" height="24">
+        </a>
+      </li>
     </ul>
   </div>
 
@@ -86,7 +98,9 @@
       </p>
     </div>
     <div class="about-image">
-      <img src="images\img.jpg" alt="photo" width="302" height="259" id="about-photo">
+      <div class="wrapper">
+        <img src="images\img.jpg" alt="photo" width="302" height="259">
+      </div>
     </div>
   </div>
 
@@ -179,7 +193,7 @@
         </p>
       </div>
       <div class="contact-form">
-        <form>
+        <form action="mailto:alexandru.c.raportaru@gmail.com" method="post" enctype="text/plain">
           <div class="form-row">
             <div class="form-group col-md-6 pl-2">
               <input type="text" class="form-control" id="inputName" placeholder="Name">
