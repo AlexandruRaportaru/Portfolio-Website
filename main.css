@@ -139,8 +139,12 @@ a {
     color: #64ffda;
     font-size: 20px;
     font-family: Consolas;
-    padding: 0;
+    padding: 5px 0;
     display: inline-block;
+}
+
+.container-name {
+    padding-top: 10px;
 }
 
 .intro h1 {
@@ -164,7 +168,7 @@ a {
  
 @-webkit-keyframes glow {
       from {
-       color: #fff;
+       color: #ffffff;
      text-shadow: 0 0 5px #64ffda, 0 0 10px #64ffda, 0 0 15px #64ffda, 0 0 20px #64ffda, 0 0 25px #64ffda, 0 0 30px #64ffda, 0 0 35px #64ffda, 0 0 45px #64ffda;
 }
    
@@ -290,7 +294,7 @@ a {
 
 .wrapper {
     box-shadow: 12.5px 12.5px 30px -15px #ffffff;
-    transition: 0.3s;
+    transition: 0.5s;
     display: block;
     position: relative;
     width: 100%;
@@ -342,6 +346,7 @@ a {
     border: 2px solid #64ffda;
     top: 0px;
     left: 0px;
+    transition: 0.5s;
 }
 
 /* SKILLS SECTION */
@@ -459,7 +464,12 @@ a {
 }
 
 .under-construction {
-    width: 900px;
+    display: flex;
+    justify-content: center;
+}
+
+.under-construction img {
+    width: 800px;
     height: 450px;
     border-radius: 10px;
 }
