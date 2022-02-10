@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap");
 
+
 body {
     background: #1d1d1d !important;
 }
@@ -138,20 +139,45 @@ a {
     color: #64ffda;
     font-size: 20px;
     font-family: Consolas;
-    padding: 5px 0px;
+    padding: 0;
     display: inline-block;
 }
 
 .intro h1 {
     font-size: 60px;
     color: white;
-    padding: 5px 0px;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.neons {
+    text-align: center;
+}
+ 
+.neons h1 {
+   text-align: center;
+    font-weight: bold;
+   -webkit-animation: glow 2s ease-in-out infinite alternate;
+   -moz-animation: glow 2s ease-in-out infinite alternate;
+   animation: glow 2s ease-in-out infinite alternate;
+}
+ 
+@-webkit-keyframes glow {
+      from {
+       color: #fff;
+     text-shadow: 0 0 5px #64ffda, 0 0 10px #64ffda, 0 0 15px #64ffda, 0 0 20px #64ffda, 0 0 25px #64ffda, 0 0 30px #64ffda, 0 0 35px #64ffda, 0 0 45px #64ffda;
+}
+   
+   to {
+      color: #2b2b2b;
+     text-shadow: 0 0 10px #64ffda, 0 0 15px #64ffda, 0 0 20px #64ffda, 0 0 25px #64ffda, 0 0 30px #64ffda, 0 0 35px #64ffda, 0 0 40px #64ffda, 0 1 45px #64ffda;
+   }
 }
 
 .second-intro-text {
     color: #8892b0;
     font-size: 40px;
-    padding: 5px 0px;
+    padding: 0;
     display: inline-block;
 }
 
@@ -263,7 +289,7 @@ a {
 }
 
 .wrapper {
-    box-shadow: 10px 10px 30px -15px #64ffda;
+    box-shadow: 12.5px 12.5px 30px -15px #ffffff;
     transition: 0.3s;
     display: block;
     position: relative;
@@ -289,8 +315,8 @@ a {
 .wrapper::after {
     z-index: -1;
     border: 2px solid #64ffda;
-    top: 20px;
-    left: 20px;
+    top: 25px;
+    left: 25px;
 }
 
 .wrapper::before , .wrapper::after {
@@ -434,6 +460,7 @@ a {
 
 .under-construction {
     width: 900px;
+    height: 450px;
     border-radius: 10px;
 }
 
@@ -504,7 +531,7 @@ a {
     padding: 5px 0px !important;
 }
 
-.pl-2 {
+.pr-10 {
     padding-right: 10px !important;
 }
 
@@ -550,6 +577,7 @@ textarea {
     text-decoration: none;
     font-family: Consolas;
     border: 2px solid #fd2155;
+    background-color: #1d1d1d;
 }
 
 .neon:hover {
