@@ -31,17 +31,17 @@
     <div class="mobile-menu">
       <a class="logos" href="#home"><span class="navbar-brand mb-0 h1" id="logo">&lt;AR/&gt;</span></a>
       <div class="menu-toggle">
-        <input type="checkbox">
+        <input type="checkbox" onclick="toggleMenu()">
         <span></span>
         <span></span>
         <span></span>
         <ul class="mobile-list" id="mobile-wrapper">
-          <li><a href="#home">01.<span class="mobile">Home</span></a></li>
-          <li><a href="#about">02.<span class="mobile">About</span></a></li>
-          <li><a href="#skills">03.<span class="mobile">Skills</span></a></li>
-          <li><a href="#work">04.<span class="mobile">Work</span></a></li>
-          <li><a href="#contact">05.<span class="mobile">Contact</span></a></li>
-          <li class="neon-cv"><a href="images\CV_RaportaruA..pdf" class="neon">Curriculum Vitae</a></li>
+          <li><a href="#home" onclick="autoClose()">01.<span class="mobile">Home</span></a></li>
+          <li><a href="#about" onclick="autoClose()">02.<span class="mobile">About</span></a></li>
+          <li><a href="#skills" onclick="autoClose()">03.<span class="mobile">Skills</span></a></li>
+          <li><a href="#work" onclick="autoClose()">04.<span class="mobile">Work</span></a></li>
+          <li><a href="#contact" onclick="autoClose()">05.<span class="mobile">Contact</span></a></li>
+          <li class="neon-cv"><a href="images\CV_RaportaruA..pdf" onclick="autoClose()" class="neon">Curriculum Vitae</a></li>
         </ul>
       </ul>
     </div>
@@ -67,6 +67,7 @@
     </ul>
   </div>
 
+  <div class="content">
   <!--INTRO SECTION-->
   <div class="intro" id="home">
     <div class="intro-text">
@@ -255,6 +256,7 @@
         </a>
       </li>
     </ul>
+  </div>
   </div>
 </body>
 </html>

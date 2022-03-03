@@ -2,7 +2,6 @@ let prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
   const currentScrollPos = window.pageYOffset;
   const navbar = document.getElementById("navbar");
-  const mobile = document.getElementById("mobile-wrapper")
 
   if (prevScrollpos > currentScrollPos) {
     navbar.style.top = "0";
@@ -19,7 +18,29 @@ window.onscroll = function() {
   prevScrollpos = currentScrollPos;
 } 
 
-//
+
+function toggleMenu()
+{
+  const isOpen = document.querySelector('.menu-toggle input').checked;
+  const content = document.querySelector('.content');
+
+  if(isOpen) {
+    document.body.classList.add("stop-scrolling");
+    content.classList.add("blur");
+  } else {
+    document.body.classList.remove("stop-scrolling");
+    content.classList.remove("blur");
+  }
+}
+
+function autoClose() {
+  const input = document.querySelector('.menu-toggle input');
+  const content = document.querySelector('.content');
+
+  input.checked = false;
+  document.body.classList.remove("stop-scrolling");
+  content.classList.remove("blur");
+}
 
 
 function submitForm(){
