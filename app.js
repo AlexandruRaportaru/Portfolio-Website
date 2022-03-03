@@ -2,6 +2,7 @@ let prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
   const currentScrollPos = window.pageYOffset;
   const navbar = document.getElementById("navbar");
+  const mobile = document.getElementById("mobile-wrapper")
 
   if (prevScrollpos > currentScrollPos) {
     navbar.style.top = "0";
