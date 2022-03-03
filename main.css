@@ -57,6 +57,10 @@ a {
 
 /* ------------------------------------------------------------- SOCIAL ICONS SECTION ---------------------------------------------------- */
 
+.social-mobile {
+    display: none;
+}
+
 .social-icons {
     display: flex;
     flex-direction: column;
