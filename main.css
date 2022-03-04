@@ -800,6 +800,7 @@ textarea {
         -webkit-user-select: none;
         user-select: none;
         width: auto;
+        margin-right: 10px;
     }
 
     .mobile-list li a {
@@ -1237,7 +1238,6 @@ textarea {
 
 @media (min-width: 769px) and (max-width: 1200px) {
 
-
     .image-intro {
         display: flex;
         justify-content: center;
@@ -1303,10 +1303,6 @@ textarea {
         padding: 0px;
     }
 
-    .navbar {
-        padding: 10px 25px !important;
-    }
-
     .menu-toggle {
         display: block;
         position: relative;
@@ -1316,6 +1312,7 @@ textarea {
         -webkit-user-select: none;
         user-select: none;
         width: auto;
+        margin-right: 20px;
     }
 
     .mobile-list li a {
@@ -1428,5 +1425,21 @@ textarea {
 
     .mobile-list .neon-cv {
         padding-right: 100px;
+    }
+}
+
+/* -------------------------------------------------------- MEDIA QUERY 1200px --------------------------------------------------------------- */
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+    .intro {
+        height: 700px;
+    }
+
+    .image-intro {
+        top: 350px;
+    }
+
+    .about-image {
+        margin-left: 150px;
     }
 }
