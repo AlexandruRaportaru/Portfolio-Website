@@ -17,20 +17,20 @@ body {
     display: block !important;
 }
 
-.navbar-list {
-    margin-left: auto;
-    display: flex;
-    list-style: none;
-    margin-bottom: 0;
-    margin-right: 15px;
-}
-
 #logo {
     font-family: 'Finger Paint', cursive;
     font-size: 35px;
     color: #64ffda;
     margin: 0px;
     padding: 0px;
+}
+
+.navbar-list {
+    margin-left: auto;
+    display: flex;
+    list-style: none;
+    margin-bottom: 0;
+    margin-right: 15px;
 }
   
 a {
@@ -132,12 +132,11 @@ a {
 /* ----------------------------------------------------------- INTRO SECTION ----------------------------------------------------------- */
 
 .intro {
-    padding-left: 150px;
-    margin-left: 110px;
+    margin-left: 10%;
     display: grid;
     height: 650px;
-    padding-right: 50px;
     padding-top: 100px;
+    position: relative;
 }
 
 .intro-text {
@@ -399,15 +398,16 @@ a {
 }
 
 .photo-intro {
-    height: 400px;
+    max-width: 767px;
+    width: 50vw;
     float: right;
 }
 
 /* ------------------------------------------------------------ ABOUT SECTION ------------------------------------------------------------- */
 
 .about{
-    padding: 100px 150px;
-    margin: 0px 160px;
+    padding: 100px 0;
+    margin: 0 12%;
     display: flex;
 }
 .about-section {
@@ -512,8 +512,8 @@ a {
 
 
 .skills{
-    padding: 100px 150px;
-    margin: 0px 160px;
+    padding: 100px 0;
+    margin: 0 12%;
 }
 .skills-section {
     display: block;
@@ -590,8 +590,8 @@ a {
 /* ---------------------------------------------------------------- WORK SECTION ---------------------------------------------------------- */
 
 .work {
-    padding: 100px 150px;
-    margin: 0px 160px;
+    padding: 100px 0;
+    margin: 0 12%;
 }
 .work-section {
     display: block;
@@ -643,8 +643,8 @@ a {
 /* --------------------------------------------------------------- CONTACT SECTION --------------------------------------------------------- */
 
 .contact {
-    padding: 100px 0px 100px 150px;
-    margin: 0px 0px 0px 160px;
+    padding: 100px 0;
+    margin: 0 12%;
     display: flex;
 }
 .contact-heading {
@@ -772,9 +772,9 @@ textarea {
     display: block;
 }
 
-/* -------------------------------------------------------- MEDIA QUERY ------------------------------------------------------------------ */
+/* -------------------------------------------------------- MEDIA QUERY 480px ---------------------------------------------------------------- */
 
-@media (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 768px) {
     .container-fluid {
         display: none !important;
     }
@@ -861,9 +861,9 @@ textarea {
 
     .mobile-list {
         position: fixed;
-        width: min(98vw, 400px);
-        height: 108vh;
-        margin: -100px 0 0 -236px;
+        width: min(124vw, 400px);
+        height: 110vh;
+        margin: -100px 0 0 -242px;
         padding: 35px;
         padding-top: 125px;
         background: #2b2b2b;
@@ -872,7 +872,7 @@ textarea {
         transform-origin: 0% 0%;
         transform: translate(100%, 0);
         transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-        box-shadow: -10px 20px 30px -15px rgba(100, 255, 218, 0.5)
+        box-shadow: -10px 20px 30px -15px rgba(100, 255, 218, 0.5);
     }
 
     .mobile-list li {
@@ -882,7 +882,7 @@ textarea {
 
     .mobile-list li a {
         display: flex;
-        font-size: clamp(15px, 4.5vw, 30px);
+        font-size: clamp(15px, 3.5vw, 30px);
     }
 
     .menu-toggle input:checked ~ ul {
@@ -896,7 +896,7 @@ textarea {
         transition: 0.3s;
         background: none !important;
         padding-left: 2px;
-        font-size: clamp(15px, 4.5vw, 30px);
+        font-size: clamp(15px, 3.5vw, 30px);
     }
     .mobile:hover {
         opacity: 1;
@@ -905,13 +905,13 @@ textarea {
 
     .mobile-list li .neon {
         text-align: center;
-        font-size: 19px !important;
+        font-size: clamp(15px, 3.5vw, 22px);
         display: flex;
         justify-content: center;
     }
 
     .mobile-list .neon-cv {
-        max-width: 46vw;
+        padding-right: 100px;
     }
 
     /* -------------- SOCIAL ICONS SECTION --------------- */
@@ -922,6 +922,7 @@ textarea {
 
     .social-mobile {
         display: flex;
+        justify-content: center;
         padding: 0 25px 25px 25px;
         height: auto;
     }
@@ -1120,56 +1121,13 @@ textarea {
         display: block;
         position: relative;
         width: auto;
-        border-radius: 2%;
-        background-color: #64ffda;
-        margin-right: 25px;
-    }
-    
-    .wrapper img {
-        mix-blend-mode: multiply;
-        filter: grayscale(100%) contrast(1);
-        border-radius: 2%;
-        position: relative;
-    }
-    
-    .wrapper::before {
-        top: 0px;
-        left: 0px;
-        mix-blend-mode: screen;
-        background-color: #1d1d1d;
-    }
-    
-    .wrapper::after {
-        z-index: -1;
-        border: 2px solid #64ffda;
-        top: 25px;
-        left: 25px;
     }
     
     .wrapper::before , .wrapper::after {
         display: block;
         position: absolute;
-        content: "";
         width: 100%;
         height: 100%;
-        border-radius: 2%;
-        transition: 0.3s;
-    }
-    
-    .wrapper:hover {
-        box-shadow: none;
-    }
-    
-    .wrapper img:hover {
-        mix-blend-mode: normal;
-        filter: none;
-    }
-    
-    .wrapper:hover::after {
-        border: 2px solid #64ffda;
-        top: 0px;
-        left: 0px;
-        transition: 0.5s;
     }
 
     /* -------------- SKILLS SECTION --------------- */
@@ -1232,9 +1190,7 @@ textarea {
     }
     
     .under-construction img {
-        width: auto;
         height: auto;
-        border-radius: 10px;
     }
     
     .work p {
@@ -1254,7 +1210,6 @@ textarea {
     }
     .contact-number {
         font-size: clamp(15px, 4.5vw, 30px);
-        padding-bottom: 40px;
     }
     
     .contact-title {
@@ -1262,18 +1217,11 @@ textarea {
     }
     
     .contact-text {
-        color: #8892b0;
-        font-size: 18px;
         width: auto;
     }
     
     .contact-form {
         width: auto;
-    }
-    
-    .form-row {
-        display: flex;
-        justify-content: space-between;
     }
     
     .contact-map {
@@ -1282,5 +1230,203 @@ textarea {
 
     .contact-map img {
         width: 100%;
+    }
+}
+
+/* -------------------------------------------------------- MEDIA QUERY 768px ---------------------------------------------------------------- */
+
+@media (min-width: 769px) and (max-width: 1200px) {
+
+
+    .image-intro {
+        display: flex;
+        justify-content: center;
+        position:initial;
+        padding-top: 30px;
+        padding-right: 0px;
+    }
+
+    .about{
+        display: block;
+    }
+
+    .about-text {
+        width: auto;
+    }
+
+    .about-image {
+        padding-top: 30px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .wrapper {
+        box-shadow: 5px 5px 30px -15px #ffffff;
+        transition: 0.5s;
+        display: block;
+        position: relative;
+        width: auto;
+    }
+    
+    .wrapper::before , .wrapper::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    .under-construction img {
+        height: auto;
+    }
+
+    .contact {
+        display: block;
+    }
+
+    .contact-map {
+        padding: 30px 0;
+    }
+}
+
+/* -------------------------------------------------------- MEDIA QUERY 1024px --------------------------------------------------------------- */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container-fluid {
+        display: none !important;
+    }
+
+    .mobile-menu {
+        display: flex !important;
+    }
+
+    .mobile-menu .logos {
+        padding: 0px;
+    }
+
+    .navbar {
+        padding: 10px 25px !important;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: relative;
+        margin-left: auto;
+        margin-top: 10px;
+        z-index: 1;
+        -webkit-user-select: none;
+        user-select: none;
+        width: auto;
+    }
+
+    .mobile-list li a {
+        text-decoration: none;
+        color: #232323;
+        transition: color 0.3s ease;
+    }
+
+    .menu-toggle input {
+        display: block;
+        width: 40px;
+        height: 32px;
+        position: absolute;
+        top: -7px;
+        left: -5px;
+        cursor: pointer;
+        opacity: 0;
+        z-index: 2;
+        -webkit-touch-callout: none;
+    } 
+
+    .menu-toggle span {
+        display: block;
+        width: 33px;
+        height: 4px;
+        margin-bottom: 5px;
+        position: relative;
+        background: #64ffda;
+        border-radius: 3px;
+        z-index: 1;
+        transform-origin: 4px 0px;
+        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+    }
+
+    .menu-toggle span:first-child {
+        transform-origin: 0% 0%;
+    }
+
+    .menu-toggle span:nth-last-child(2) {
+        transform-origin: 0% 100%;
+    }
+
+    .menu-toggle input:checked ~ span {
+        opacity: 1;
+        transform: rotate(45deg) translate(-2px, -1px);
+        background: #64ffda;
+    }
+
+    .menu-toggle input:checked ~ span:nth-last-child(3) {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+    }
+
+    .menu-toggle input:checked ~ span:nth-last-child(2) {
+        transform: rotate(-45deg) translate(0, -1px);
+    }
+
+    .mobile-list {
+        position: fixed;
+        width: min(124vw, 400px);
+        height: 110vh;
+        margin: -100px 0 0 -242px;
+        padding: 35px;
+        padding-top: 125px;
+        background: #2b2b2b;
+        list-style-type: none;
+        -webkit-font-smoothing: antialiased;
+        transform-origin: 0% 0%;
+        transform: translate(100%, 0);
+        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+        box-shadow: -10px 20px 30px -15px rgba(100, 255, 218, 0.5);
+    }
+
+    .mobile-list li {
+        padding: 10px 0;
+        font-size: 22px;
+    }
+
+    .mobile-list li a {
+        display: flex;
+        font-size: clamp(15px, 3.5vw, 30px);
+    }
+
+    .menu-toggle input:checked ~ ul {
+        transform: none;
+    }
+    
+    .mobile {
+        border: none;
+        color:#8892b0;
+        opacity: 0.6;
+        transition: 0.3s;
+        background: none !important;
+        padding-left: 2px;
+        font-size: clamp(15px, 3.5vw, 30px);
+    }
+    .mobile:hover {
+        opacity: 1;
+        color: #64ffda;
+    }
+
+    .mobile-list li .neon {
+        text-align: center;
+        font-size: clamp(15px, 3.5vw, 22px);
+        display: flex;
+        justify-content: center;
+    }
+
+    .mobile-list .neon-cv {
+        padding-right: 100px;
     }
 }
