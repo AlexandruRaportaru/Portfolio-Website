@@ -43,7 +43,8 @@ function autoClose() {
 }
 
 
-function submitForm(){
+function submitForm(event){
+  event.preventDefault();
   document.getElementById('name').value='';
   document.getElementById('email').value='';
   document.getElementById('subject').value='';

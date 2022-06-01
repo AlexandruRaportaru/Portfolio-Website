@@ -215,17 +215,17 @@
           <form action="https://getform.io/f/b8601500-be29-4f98-8fcb-35a36471aadb" method="post">
             <div class="form-row">
               <div class="form-group col pr-10">
-                <input type="text" class="form-control" id="name" name="Name" placeholder="Name">
+                <input type="text" class="form-control" id="name" name="Name" placeholder="Name" required maxlength="45">
               </div>
               <div class="form-group col">
-                <input type="email" class="form-control" id="email" name="Email" placeholder="Email">
+                <input type="email" class="form-control" id="email" name="Email" placeholder="Email" required maxlength="45">
               </div>
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" id="subject" name="Subject" placeholder="Subject">
+              <input type="text" class="form-control" id="subject" name="Subject" placeholder="Subject" required maxlength="100">
             </div>
             <div class="form-group">
-              <textarea type="text" class="form-control" id="message" name="Message" placeholder="Message"></textarea>
+              <textarea type="text" class="form-control" id="message" name="Message" placeholder="Message" required maxlength="9999"></textarea>
             </div>
             <div class="form-button">
               <button type="submit" value="Submit" onclick="submitForm()" class="neon">Send Message!</button>
