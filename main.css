@@ -159,31 +159,31 @@ a {
     );
     letter-spacing: 2;
     font-size: 60px;
-    color: #e0fff8;
-    text-shadow: 0 0 0.6rem #e0fff8, 0 0 1.5rem #b3ffed,
-      -0.2rem 0.1rem 1rem #b3ffed, 0.2rem 0.1rem 1rem #b3ffed,
-      0 -0.5rem 2rem #64ffda, 0 0.5rem 3rem #64ffda;
-    animation: shine 2s forwards, flicker 3s infinite;
+    color: #7dffe1;
+    text-shadow: 0 0 0.6rem #7dffe1, 0 0 1.5rem #00ffc3,
+      -0.2rem 0.1rem 1rem #00ffc3, 0.2rem 0.1rem 1rem #00ffc3,
+      0 -0.5rem 2rem #005742, 0 0.5rem 3rem #005742;
+    animation: shine 2s forwards, flicker 3s infinite; 
 }
-  
+
 @keyframes blink {
     0%,
     22%,
     36%,
     75% {
-      color: #e0fff8;
-      text-shadow: 0 0 0.6rem #e0fff8, 0 0 1.5rem #b3ffed,
-        -0.2rem 0.1rem 1rem #b3ffed, 0.2rem 0.1rem 1rem #b3ffed,
-        0 -0.5rem 2rem #64ffda, 0 0.5rem 3rem #64ffda;
+      color: #7dffe1;
+      text-shadow: 0 0 0.6rem #7dffe1, 0 0 1.5rem #00ffc3,
+        -0.2rem 0.1rem 1rem #00ffc3, 0.2rem 0.1rem 1rem #00ffc3,
+        0 -0.5rem 2rem #005742, 0 0.5rem 3rem #005742;
     }
     28%,
     33% {
-      color: #b3ffed;
+      color: #005742;
       text-shadow: none;
     }
     82%,
     97% {
-      color: #64ffda;
+      color: #005742;
       text-shadow: none;
     }
 }
@@ -202,10 +202,10 @@ a {
       text-shadow: none;
     }
     100% {
-      color: #e0fff8;
-      text-shadow: 0 0 0.6rem #e0fff8, 0 0 1.5rem #b3ffed,
-        -0.2rem 0.1rem 1rem #b3ffed, 0.2rem 0.1rem 1rem #b3ffed,
-        0 -0.5rem 2rem #64ffda, 0 0.5rem 3rem #64ffda;
+      color: #7dffe1;
+      text-shadow: 0 0 0.6rem #7dffe1, 0 0 1.5rem #00ffc3,
+        -0.2rem 0.1rem 1rem #00ffc3, 0.2rem 0.1rem 1rem #00ffc3,
+        0 -0.5rem 2rem #005742, 0 0.5rem 3rem #005742;
     }
 }
   
@@ -551,9 +551,32 @@ a {
     display: block;
 }
 
+.skills-text a {
+    display: inline-block;
+    position: relative;
+    color: #64ffda;
+}
+  
+.skills-text a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fd2155;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+  
+.skills-text a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
 .container-icons {
     text-align: center;
-    margin-bottom: 3rem;
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -562,7 +585,7 @@ a {
 }
 
 .container-icons .box-icon {
-    width: 149px;
+    width: 123px;
     height: 175px;
 }
 
@@ -622,23 +645,81 @@ a {
     background-color: #80ffe5;
 }
 
-.under-construction {
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    position: relative;
+}
+
+.cards {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    padding: 2rem 1.75rem;
+    border-radius: 10px;
+    background-color: #2b2b2b !important;
+}
+
+.cards:hover {
+    transform: scale(1.05);
+    transition: all 0.5s ease;
+    box-shadow: 10px 10px 20px -8px #64ffda;
+}
+
+img.card-image {
+    max-width: 260px;
+    border-radius: 10px;
+    padding-bottom: 20px;
+}
+
+.card-title {
+    color: #8892b0;
+    margin-bottom: 0 !important;
+}
+
+.card-tools {
     display: flex;
     justify-content: center;
-}
-
-.under-construction img {
-    width: 800px;
-    height: 450px;
-    border-radius: 10px;
-}
-
-.work p {
     text-align: center;
-    color:#64ffda;
-    font-size: 30px;
-    font-family: Consolas;
 }
+
+.card-tools img {
+    max-width: 28px;
+    padding: 4px 4px 0 4px;
+}
+
+.card-buttons {
+    width: 100%;
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-buttons a {
+    padding: 0;
+}
+
+button.external-link.neon {
+    max-width: 102px;
+    max-height: 44px;
+    font-size: 12px;
+    padding: 5px 9px;
+}
+
+button.github-repo.neon {
+    padding: 5px 9px;
+    font-size: 12px;
+    max-width: 135px;
+    max-height: 44px;
+}
+
 
 /* --------------------------------------------------------------- CONTACT SECTION --------------------------------------------------------- */
 
@@ -1189,14 +1270,18 @@ textarea {
     .work-title {
         font-size: clamp(15px, 4.5vw, 30px);
     }
-    
-    .under-construction img {
-        height: auto;
+
+    .card-buttons {
+        width: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .card-buttons button {
+        margin: 0 15px;
     }
     
-    .work p {
-        font-size: clamp(15px, 4.5vw, 30px);
-    }
+    
     
     /* -------------- CONTACT SECTION --------------- */
 
@@ -1275,8 +1360,28 @@ textarea {
         height: 100%;
     }
 
-    .under-construction img {
-        height: auto;
+    .card-buttons {
+        width: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .card-buttons button {
+        margin: 0 15px;
+    }
+
+    button.external-link.neon {
+        max-width: 102px;
+        max-height: 44px;
+        font-size: 12px;
+        padding: 1px 9px;
+    }
+    
+    button.github-repo.neon {
+        padding: 1px 9px;
+        font-size: 12px;
+        max-width: 135px;
+        max-height: 44px;
     }
 
     .contact {
@@ -1441,5 +1546,15 @@ textarea {
 
     .about-image {
         margin-left: 150px;
+    }
+
+    .card-buttons {
+        width: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .card-buttons button {
+        margin: 0 15px;
     }
 }
