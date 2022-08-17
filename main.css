@@ -4,6 +4,21 @@
 body {
     background: #1d1d1d !important;
 }
+
+body::-webkit-scrollbar {
+    width: 15px;
+}
+  
+body::-webkit-scrollbar-track {
+    background: #1d1d1d;
+}
+  
+body::-webkit-scrollbar-thumb {
+    background-color: #1d1d1d;
+    border-radius: 30px;
+    border: 2px solid #64ffda;
+}
+
 /*------------------------------------------------------------------ NAVBAR SECTION ------------------------------------------------------ */
 .navbar {
     padding: 20px 40px !important;
@@ -585,14 +600,14 @@ a {
 }
 
 .container-icons .box-icon {
-    width: 123px;
+    width: 109px;
     height: 175px;
 }
 
 .container-icons .all-icons {
     color: #64ffda;
-    max-width: 115px;
-    height: 100px;
+    max-width: 100px;
+    height: 90px;
     padding-bottom: 15px;
 }
 
